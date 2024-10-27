@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+    
 jobs:
   hello_world_job:
     runs-on: ubuntu-20.04
@@ -12,3 +13,17 @@ jobs:
       - name: Say hello
         run: |
           echo "Hello World!"
+          
+  print_date_job:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Todays date
+        run: |
+          date
+          
+  print_directory_job:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Directory content
+        run: |
+          ls -l
